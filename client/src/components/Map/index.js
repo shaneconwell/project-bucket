@@ -11,7 +11,7 @@ import Auth from '../../utils/auth'
 import { SignupButton } from "../SignupButton";
 import { Typography, Button, ButtonGroup } from "@material-ui/core";
 import { Link } from "react-router-dom";
-const API_KEY = process.env.REACT_APP_MAPBOX_TOKEN || "pk.eyJ1Ijoic2NvbndlbGwiLCJhIjoiY2tzZzhkcHFtMWk3eDJ1cGlvenU2M2NqdyJ9.yCXu7vtgwhHAf74kxtkF5w"
+// const API_KEY = process.env.REACT_APP_MAPBOX_TOKEN || "pk.eyJ1Ijoic2NvbndlbGwiLCJhIjoiY2tzZzhkcHFtMWk3eDJ1cGlvenU2M2NqdyJ9.yCXu7vtgwhHAf74kxtkF5w"
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -45,7 +45,7 @@ export default function Map() {
     //     getPins();
     // }, [])
 
-  const handleMarkerClick = (id, API_KEY) => {
+  const handleMarkerClick = (id) => {
     setCurrentPinId(id);
   };
   const signupStyle = {justifyContent: 'center', backgroundColor:'green', fontSize:40}
@@ -56,7 +56,7 @@ export default function Map() {
     <div>
     <ReactMapGL
       {...viewport}
-      mapboxApiAccessToken={API_KEY}
+      mapboxApiAccessToken="pk.eyJ1Ijoic2NvbndlbGwiLCJhIjoiY2tzZzhkcHFtMWk3eDJ1cGlvenU2M2NqdyJ9.yCXu7vtgwhHAf74kxtkF5w"
       onViewportChange={(nextViewport) => setViewport(nextViewport)}
       mapStyle="mapbox://styles/ksedd/cksc6kfgo0u8218qt31axgx6p"
     >
