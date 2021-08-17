@@ -11,7 +11,7 @@ import Auth from '../../utils/auth'
 import { SignupButton } from "../SignupButton";
 import { Typography, Button, ButtonGroup } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
+const API_KEY = process.env.REACT_APP_MAPBOX_TOKEN
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
@@ -56,7 +56,7 @@ export default function Map() {
     <div>
     <ReactMapGL
       {...viewport}
-      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+      mapboxApiAccessToken={API_KEY}
       onViewportChange={(nextViewport) => setViewport(nextViewport)}
       mapStyle="mapbox://styles/ksedd/cksc6kfgo0u8218qt31axgx6p"
     >
