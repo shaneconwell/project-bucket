@@ -18,9 +18,9 @@
   ## Installation
   In order to install this project you will need to fork & clone our repository and run the needed NPM installations. Following that you will need to start up the Mongodb database and server and then start the React app using 'npm start' or any equivalent command.
   ## Usage
-  A link to the deployed application can be found [here]().
+  A link to the deployed application can be found [here](https://bucket-sc.herokuapp.com/).
 
-  ![Screenshot](...)
+  ![Screenshot](./client/public/images/bucket-screenshot.png)
     
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 

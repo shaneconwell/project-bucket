@@ -24,7 +24,7 @@ export default function Signup() {
     formData.append("upload_preset", "m9i5zjc7")
 
 
-    Axios.post("https://api.cloudinary.com/v1_1/djhw1foiq/image/upload", formData).then((response) => {
+    Axios.post("https://api.cloudinary.com/v1_1/dllm7cfrg/image/upload", formData).then((response) => {
       const userAvatar = response.data.url
       console.log(userAvatar)
         setFormState({
